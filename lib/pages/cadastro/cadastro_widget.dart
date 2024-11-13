@@ -5,8 +5,11 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'cadastro_model.dart';
 export 'cadastro_model.dart';
 
@@ -67,10 +70,10 @@ class _CadastroWidgetState extends State<CadastroWidget> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF1D2428),
+        backgroundColor: Color(0xFF1D2428),
         body: Container(
           height: double.infinity,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [Color(0xFF7639EF), Color(0xFF846CCC)],
               stops: [0.0, 1.0],
@@ -78,20 +81,20 @@ class _CadastroWidgetState extends State<CadastroWidget> {
               end: AlignmentDirectional(-0.87, 1.0),
             ),
           ),
-          alignment: const AlignmentDirectional(0.0, -1.0),
+          alignment: AlignmentDirectional(0.0, -1.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 32.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 32.0),
                 child: Container(
                   width: 200.0,
                   height: 70.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16.0),
                   ),
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     'OCTOFY',
                     style: FlutterFlowTheme.of(context).displaySmall.override(
@@ -105,7 +108,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
               Container(
                 width: double.infinity,
                 height: 670.0,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: Color(0xFF14181B),
                   boxShadow: [
                     BoxShadow(
@@ -125,10 +128,10 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                   ),
                 ),
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(32.0, 17.0, 32.0, 12.0),
+                        EdgeInsetsDirectional.fromSTEB(32.0, 17.0, 32.0, 12.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -146,20 +149,20 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                               ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 0.0, 12.0),
                           child: TextFormField(
                             controller: _model.emailTextController,
                             focusNode: _model.emailFocusNode,
                             autofocus: true,
-                            autofillHints: const [AutofillHints.email],
+                            autofillHints: [AutofillHints.email],
                             obscureText: false,
                             decoration: InputDecoration(
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelLarge
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: const Color(0xFF95A1AC),
+                                    color: Color(0xFF95A1AC),
                                     letterSpacing: 0.0,
                                   ),
                               hintText: 'Email',
@@ -167,12 +170,12 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                   .bodyLarge
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: const Color(0xFF95A1AC),
+                                    color: Color(0xFF95A1AC),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0xFF1D2428),
                                   width: 2.0,
                                 ),
@@ -186,21 +189,21 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0xFF1D2428),
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0xFF1D2428),
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
-                              fillColor: const Color(0xFF1D2428),
+                              fillColor: Color(0xFF1D2428),
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyLarge
@@ -217,20 +220,20 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 12.0),
                           child: TextFormField(
                             controller: _model.nomeTextController,
                             focusNode: _model.nomeFocusNode,
                             autofocus: true,
-                            autofillHints: const [AutofillHints.name],
+                            autofillHints: [AutofillHints.name],
                             obscureText: false,
                             decoration: InputDecoration(
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: const Color(0xFF95A1AC),
+                                    color: Color(0xFF95A1AC),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                   ),
@@ -239,12 +242,12 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                   .labelMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: const Color(0xFF95A1AC),
+                                    color: Color(0xFF95A1AC),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0xFF1D2428),
                                   width: 2.0,
                                 ),
@@ -258,21 +261,21 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0xFF1D2428),
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0xFF1D2428),
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
-                              fillColor: const Color(0xFF1D2428),
+                              fillColor: Color(0xFF1D2428),
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyLarge.override(
@@ -285,7 +288,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 12.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -303,7 +306,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                         .labelMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: const Color(0xFF95A1AC),
+                                          color: Color(0xFF95A1AC),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -312,12 +315,12 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                         .labelMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: const Color(0xFF95A1AC),
+                                          color: Color(0xFF95A1AC),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF1D2428),
                                         width: 2.0,
                                       ),
@@ -332,27 +335,27 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF1D2428),
                                         width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF1D2428),
                                         width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFF1D2428),
+                                    fillColor: Color(0xFF1D2428),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: const Color(0xFF95A1AC),
+                                        color: Color(0xFF95A1AC),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
                                       ),
@@ -366,14 +369,14 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                   controller: _model.nascimentoTextController,
                                   focusNode: _model.nascimentoFocusNode,
                                   autofocus: true,
-                                  autofillHints: const [AutofillHints.birthday],
+                                  autofillHints: [AutofillHints.birthday],
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: const Color(0xFF95A1AC),
+                                          color: Color(0xFF95A1AC),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -382,12 +385,12 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                         .labelMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: const Color(0xFF95A1AC),
+                                          color: Color(0xFF95A1AC),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF1D2428),
                                         width: 2.0,
                                       ),
@@ -402,21 +405,21 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF1D2428),
                                         width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF1D2428),
                                         width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFF1D2428),
+                                    fillColor: Color(0xFF1D2428),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -431,11 +434,11 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                       .asValidator(context),
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 10.0)),
+                            ].divide(SizedBox(width: 10.0)),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 12.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -443,7 +446,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                               FlutterFlowDropDown<String>(
                                 controller: _model.sexoValueController ??=
                                     FormFieldController<String>(null),
-                                options: const ['Feminino', 'Masculino', 'Outro'],
+                                options: ['Feminino', 'Masculino', 'Outro'],
                                 onChanged: (val) =>
                                     safeSetState(() => _model.sexoValue = val),
                                 width: 140.0,
@@ -452,21 +455,21 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                     .labelLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: const Color(0xFF95A1AC),
+                                      color: Color(0xFF95A1AC),
                                       letterSpacing: 0.0,
                                     ),
                                 hintText: 'Gênero',
-                                icon: const Icon(
+                                icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
                                   color: Color(0xFF95A1AC),
                                   size: 24.0,
                                 ),
-                                fillColor: const Color(0xFF1D2428),
+                                fillColor: Color(0xFF1D2428),
                                 elevation: 2.0,
                                 borderColor: Colors.transparent,
                                 borderWidth: 0.0,
                                 borderRadius: 12.0,
-                                margin: const EdgeInsetsDirectional.fromSTEB(
+                                margin: EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 12.0, 0.0),
                                 hidesUnderline: true,
                                 isOverButton: false,
@@ -474,13 +477,13 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 isMultiSelect: false,
                               ),
                               Expanded(
-                                child: SizedBox(
+                                child: Container(
                                   width: double.infinity,
                                   child: TextFormField(
                                     controller: _model.telefoneTextController,
                                     focusNode: _model.telefoneFocusNode,
                                     autofocus: true,
-                                    autofillHints: const [
+                                    autofillHints: [
                                       AutofillHints.telephoneNumber
                                     ],
                                     obscureText: false,
@@ -489,7 +492,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                           .labelLarge
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: const Color(0xFF95A1AC),
+                                            color: Color(0xFF95A1AC),
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: '(11) 0000-0000',
@@ -497,12 +500,12 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                           .bodyLarge
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: const Color(0xFF95A1AC),
+                                            color: Color(0xFF95A1AC),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0xFF1D2428),
                                           width: 2.0,
                                         ),
@@ -519,7 +522,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                             BorderRadius.circular(12.0),
                                       ),
                                       errorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0xFF1D2428),
                                           width: 2.0,
                                         ),
@@ -527,7 +530,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                             BorderRadius.circular(12.0),
                                       ),
                                       focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0xFF1D2428),
                                           width: 2.0,
                                         ),
@@ -535,13 +538,13 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                             BorderRadius.circular(12.0),
                                       ),
                                       filled: true,
-                                      fillColor: const Color(0xFF1D2428),
+                                      fillColor: Color(0xFF1D2428),
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: const Color(0xFF95A1AC),
+                                          color: Color(0xFF95A1AC),
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -552,26 +555,26 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 10.0)),
+                            ].divide(SizedBox(width: 10.0)),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 12.0),
-                          child: SizedBox(
+                          child: Container(
                             width: double.infinity,
                             child: TextFormField(
                               controller: _model.senhaTextController,
                               focusNode: _model.senhaFocusNode,
                               autofocus: true,
-                              autofillHints: const [AutofillHints.password],
+                              autofillHints: [AutofillHints.password],
                               obscureText: !_model.senhaVisibility,
                               decoration: InputDecoration(
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: const Color(0xFF95A1AC),
+                                      color: Color(0xFF95A1AC),
                                       letterSpacing: 0.0,
                                     ),
                                 hintText: 'Senha',
@@ -579,12 +582,12 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: const Color(0xFF95A1AC),
+                                      color: Color(0xFF95A1AC),
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
                                     ),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0xFF1D2428),
                                     width: 2.0,
                                   ),
@@ -598,21 +601,21 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0xFF1D2428),
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0xFF1D2428),
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 filled: true,
-                                fillColor: const Color(0xFF1D2428),
+                                fillColor: Color(0xFF1D2428),
                                 suffixIcon: InkWell(
                                   onTap: () => safeSetState(
                                     () => _model.senhaVisibility =
@@ -623,7 +626,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                     _model.senhaVisibility
                                         ? Icons.visibility_outlined
                                         : Icons.visibility_off_outlined,
-                                    color: const Color(0xFF95A1AC),
+                                    color: Color(0xFF95A1AC),
                                     size: 24.0,
                                   ),
                                 ),
@@ -641,22 +644,22 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 12.0),
-                          child: SizedBox(
+                          child: Container(
                             width: double.infinity,
                             child: TextFormField(
                               controller: _model.corfimsenhaTextController,
                               focusNode: _model.corfimsenhaFocusNode,
                               autofocus: true,
-                              autofillHints: const [AutofillHints.password],
+                              autofillHints: [AutofillHints.password],
                               obscureText: !_model.corfimsenhaVisibility,
                               decoration: InputDecoration(
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: const Color(0xFF95A1AC),
+                                      color: Color(0xFF95A1AC),
                                       letterSpacing: 0.0,
                                     ),
                                 hintText: 'Senha',
@@ -664,12 +667,12 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: const Color(0xFF95A1AC),
+                                      color: Color(0xFF95A1AC),
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
                                     ),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0xFF1D2428),
                                     width: 2.0,
                                   ),
@@ -683,21 +686,21 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0xFF1D2428),
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0xFF1D2428),
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 filled: true,
-                                fillColor: const Color(0xFF1D2428),
+                                fillColor: Color(0xFF1D2428),
                                 suffixIcon: InkWell(
                                   onTap: () => safeSetState(
                                     () => _model.corfimsenhaVisibility =
@@ -708,7 +711,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                     _model.corfimsenhaVisibility
                                         ? Icons.visibility_outlined
                                         : Icons.visibility_off_outlined,
-                                    color: const Color(0xFF95A1AC),
+                                    color: Color(0xFF95A1AC),
                                     size: 24.0,
                                   ),
                                 ),
@@ -727,7 +730,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -735,7 +738,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                               if (_model.senhaTextController.text !=
                                   _model.corfimsenhaTextController.text) {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
+                                  SnackBar(
                                     content: Text(
                                       'Passwords don\'t match!',
                                     ),
@@ -755,7 +758,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                               }
 
                               await UserTable().insert({
-                                'id': widget.id?.id,
+                                'id': widget!.id?.id,
                                 'nome': _model.nomeTextController.text,
                                 'CPF':
                                     int.tryParse(_model.cpfTextController.text),
@@ -772,11 +775,11 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: const Color(0xFF7639EF),
+                              color: Color(0xFF7639EF),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -786,7 +789,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 3.0,
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -795,7 +798,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 12.0),
                           child: Text(
                             'Ou entrar com',
@@ -804,13 +807,13 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 .labelMedium
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: const Color(0xFF95A1AC),
+                                  color: Color(0xFF95A1AC),
                                   letterSpacing: 0.0,
                                 ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 10.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -821,7 +824,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 return;
                               }
                               await UserTable().insert({
-                                'id': widget.id?.id,
+                                'id': widget!.id?.id,
                                 'created_at': supaSerialize<DateTime>(
                                     getCurrentTimestamp),
                                 'email': currentUserEmail,
@@ -830,16 +833,16 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                               context.goNamedAuth('HomePage', context.mounted);
                             },
                             text: 'Continue with Google',
-                            icon: const FaIcon(
+                            icon: FaIcon(
                               FontAwesomeIcons.google,
                               size: 20.0,
                             ),
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -866,7 +869,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
 
                         // You will have to add an action on this rich text to go to your login page.
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 12.0, 0.0, 12.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -880,7 +883,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                               textScaler: MediaQuery.of(context).textScaler,
                               text: TextSpan(
                                 children: [
-                                  const TextSpan(
+                                  TextSpan(
                                     text: 'Já possui uma conta? ',
                                     style: TextStyle(),
                                   ),

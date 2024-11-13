@@ -1,8 +1,11 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'meus_cartoes_model.dart';
 export 'meus_cartoes_model.dart';
 
@@ -39,10 +42,10 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: const Color(0xFFB92BFC),
+          backgroundColor: Color(0xFFB92BFC),
           automaticallyImplyLeading: false,
           title: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Text(
               'OCTOFY',
               textAlign: TextAlign.center,
@@ -55,7 +58,7 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                   ),
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -64,14 +67,14 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
           child: Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: Color(0xFF14181B),
             ),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -93,7 +96,7 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                 Container(
                   width: double.infinity,
                   height: MediaQuery.sizeOf(context).height * 1.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Color(0xFF14181B),
                   ),
                   child: Column(
@@ -101,17 +104,17 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Container(
                           width: double.infinity,
                           height: 80.0,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Color(0xFF14181B),
                           ),
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 25.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -152,14 +155,14 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                                         .override(
                                                           fontFamily: 'Inter',
                                                           color:
-                                                              const Color(0xFFCEBDFF),
+                                                              Color(0xFFCEBDFF),
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(height: 10.0)),
+                                            ].divide(SizedBox(height: 10.0)),
                                           ),
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -186,15 +189,15 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                                         .override(
                                                           fontFamily: 'Inter',
                                                           color:
-                                                              const Color(0xFFDBDBDB),
+                                                              Color(0xFFDBDBDB),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(height: 10.0)),
+                                            ].divide(SizedBox(height: 10.0)),
                                           ),
-                                        ].divide(const SizedBox(width: 170.0)),
+                                        ].divide(SizedBox(width: 170.0)),
                                       ),
                                     ],
                                   ),
@@ -204,8 +207,8 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                       FlutterFlowIconButton(
                                         borderRadius: 8.0,
                                         buttonSize: 30.0,
-                                        fillColor: const Color(0xFF14181B),
-                                        icon: const FaIcon(
+                                        fillColor: Color(0xFF14181B),
+                                        icon: FaIcon(
                                           FontAwesomeIcons.trashAlt,
                                           color: Color(0xFFF54C4C),
                                           size: 15.0,
@@ -217,15 +220,15 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                     ],
                                   ),
                                 ]
-                                    .divide(const SizedBox(width: 15.0))
-                                    .addToStart(const SizedBox(width: 25.0))
-                                    .addToEnd(const SizedBox(width: 20.0)),
+                                    .divide(SizedBox(width: 15.0))
+                                    .addToStart(SizedBox(width: 25.0))
+                                    .addToEnd(SizedBox(width: 20.0)),
                               ),
                             ),
                           ),
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 350.0,
                         child: Divider(
                           thickness: 1.0,
@@ -235,13 +238,13 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                       Container(
                         width: double.infinity,
                         height: 80.0,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Color(0xFF14181B),
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -279,13 +282,13 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Inter',
-                                                    color: const Color(0xFFCEBDFF),
+                                                    color: Color(0xFFCEBDFF),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                             ),
-                                          ].divide(const SizedBox(height: 10.0)),
+                                          ].divide(SizedBox(height: 10.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -311,14 +314,14 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Inter',
-                                                    color: const Color(0xFFDBDBDB),
+                                                    color: Color(0xFFDBDBDB),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                             ),
-                                          ].divide(const SizedBox(height: 10.0)),
+                                          ].divide(SizedBox(height: 10.0)),
                                         ),
-                                      ].divide(const SizedBox(width: 170.0)),
+                                      ].divide(SizedBox(width: 170.0)),
                                     ),
                                   ],
                                 ),
@@ -332,8 +335,8 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                           borderColor: Colors.transparent,
                                           borderRadius: 8.0,
                                           buttonSize: 30.0,
-                                          fillColor: const Color(0xFF14181B),
-                                          icon: const FaIcon(
+                                          fillColor: Color(0xFF14181B),
+                                          icon: FaIcon(
                                             FontAwesomeIcons.trashAlt,
                                             color: Color(0xFFF54C4C),
                                             size: 14.0,
@@ -350,7 +353,7 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                         FlutterFlowIconButton(
                                           borderRadius: 8.0,
                                           buttonSize: 30.0,
-                                          fillColor: const Color(0xFF14181B),
+                                          fillColor: Color(0xFF14181B),
                                           icon: FaIcon(
                                             FontAwesomeIcons.pen,
                                             color: FlutterFlowTheme.of(context)
@@ -366,14 +369,14 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                   ],
                                 ),
                               ]
-                                  .divide(const SizedBox(width: 15.0))
-                                  .addToStart(const SizedBox(width: 25.0))
-                                  .addToEnd(const SizedBox(width: 20.0)),
+                                  .divide(SizedBox(width: 15.0))
+                                  .addToStart(SizedBox(width: 25.0))
+                                  .addToEnd(SizedBox(width: 20.0)),
                             ),
                           ),
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 350.0,
                         child: Divider(
                           thickness: 1.0,
@@ -383,13 +386,13 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                       Container(
                         width: double.infinity,
                         height: 80.0,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Color(0xFF14181B),
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -429,13 +432,13 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Inter',
-                                                    color: const Color(0xFFCEBDFF),
+                                                    color: Color(0xFFCEBDFF),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                             ),
-                                          ].divide(const SizedBox(height: 10.0)),
+                                          ].divide(SizedBox(height: 10.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -465,14 +468,14 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Inter',
-                                                    color: const Color(0xFFDBDBDB),
+                                                    color: Color(0xFFDBDBDB),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                             ),
-                                          ].divide(const SizedBox(height: 10.0)),
+                                          ].divide(SizedBox(height: 10.0)),
                                         ),
-                                      ].divide(const SizedBox(width: 170.0)),
+                                      ].divide(SizedBox(width: 170.0)),
                                     ),
                                   ],
                                 ),
@@ -483,8 +486,8 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                       borderColor: Colors.transparent,
                                       borderRadius: 8.0,
                                       buttonSize: 30.0,
-                                      fillColor: const Color(0xFF14181B),
-                                      icon: const FaIcon(
+                                      fillColor: Color(0xFF14181B),
+                                      icon: FaIcon(
                                         FontAwesomeIcons.trashAlt,
                                         color: Color(0xFFF54C4C),
                                         size: 15.0,
@@ -496,9 +499,9 @@ class _MeusCartoesWidgetState extends State<MeusCartoesWidget> {
                                   ],
                                 ),
                               ]
-                                  .divide(const SizedBox(width: 15.0))
-                                  .addToStart(const SizedBox(width: 25.0))
-                                  .addToEnd(const SizedBox(width: 20.0)),
+                                  .divide(SizedBox(width: 15.0))
+                                  .addToStart(SizedBox(width: 25.0))
+                                  .addToEnd(SizedBox(width: 20.0)),
                             ),
                           ),
                         ),

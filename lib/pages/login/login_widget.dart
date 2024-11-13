@@ -2,8 +2,11 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'login_model.dart';
 export 'login_model.dart';
 
@@ -47,7 +50,7 @@ class _LoginWidgetState extends State<LoginWidget> {
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         body: Container(
           height: double.infinity,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [Color(0xFF7639EF), Color(0xFF846CCC)],
               stops: [0.0, 1.0],
@@ -55,22 +58,22 @@ class _LoginWidgetState extends State<LoginWidget> {
               end: AlignmentDirectional(-0.87, 1.0),
             ),
           ),
-          alignment: const AlignmentDirectional(0.0, -1.0),
+          alignment: AlignmentDirectional(0.0, -1.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 32.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 32.0),
                 child: Container(
                   width: 200.0,
                   height: 70.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16.0),
                   ),
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 1.0),
+                    alignment: AlignmentDirectional(0.0, 1.0),
                     child: Text(
                       'OCTOFY',
                       style: FlutterFlowTheme.of(context).displaySmall.override(
@@ -85,10 +88,10 @@ class _LoginWidgetState extends State<LoginWidget> {
               Container(
                 width: double.infinity,
                 height: 520.0,
-                constraints: const BoxConstraints(
+                constraints: BoxConstraints(
                   maxWidth: 570.0,
                 ),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: Color(0xFF14181B),
                   boxShadow: [
                     BoxShadow(
@@ -108,15 +111,15 @@ class _LoginWidgetState extends State<LoginWidget> {
                   ),
                 ),
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding: const EdgeInsets.all(32.0),
+                    padding: EdgeInsets.all(32.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 10.0),
                           child: Text(
                             'Login',
@@ -132,13 +135,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 18.0, 0.0, 16.0),
                           child: TextFormField(
                             controller: _model.emailLoginTextController,
                             focusNode: _model.emailLoginFocusNode,
                             autofocus: true,
-                            autofillHints: const [AutofillHints.email],
+                            autofillHints: [AutofillHints.email],
                             obscureText: false,
                             decoration: InputDecoration(
                               labelStyle: FlutterFlowTheme.of(context)
@@ -152,12 +155,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   .bodyLarge
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: const Color(0xFF95A1AC),
+                                    color: Color(0xFF95A1AC),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0xFF1D2428),
                                   width: 2.0,
                                 ),
@@ -171,21 +174,21 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0xFF1D2428),
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Color(0xFF1D2428),
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
-                              fillColor: const Color(0xFF1D2428),
+                              fillColor: Color(0xFF1D2428),
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyLarge.override(
@@ -199,22 +202,22 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
-                          child: SizedBox(
+                          child: Container(
                             width: double.infinity,
                             child: TextFormField(
                               controller: _model.senhaLoginTextController,
                               focusNode: _model.senhaLoginFocusNode,
                               autofocus: true,
-                              autofillHints: const [AutofillHints.password],
+                              autofillHints: [AutofillHints.password],
                               obscureText: !_model.senhaLoginVisibility,
                               decoration: InputDecoration(
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: const Color(0xFF95A1AC),
+                                      color: Color(0xFF95A1AC),
                                       letterSpacing: 0.0,
                                     ),
                                 hintText: 'Senha',
@@ -222,12 +225,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: const Color(0xFF95A1AC),
+                                      color: Color(0xFF95A1AC),
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
                                     ),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0xFF1D2428),
                                     width: 2.0,
                                   ),
@@ -241,21 +244,21 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0xFF1D2428),
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0xFF1D2428),
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 filled: true,
-                                fillColor: const Color(0xFF1D2428),
+                                fillColor: Color(0xFF1D2428),
                                 suffixIcon: InkWell(
                                   onTap: () => safeSetState(
                                     () => _model.senhaLoginVisibility =
@@ -266,7 +269,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     _model.senhaLoginVisibility
                                         ? Icons.visibility_outlined
                                         : Icons.visibility_off_outlined,
-                                    color: const Color(0xFF95A1AC),
+                                    color: Color(0xFF95A1AC),
                                     size: 24.0,
                                   ),
                                 ),
@@ -285,7 +288,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -306,11 +309,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: const Color(0xFF7639EF),
+                              color: Color(0xFF7639EF),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -320,7 +323,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 3.0,
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -329,7 +332,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 20.0),
                           child: Text(
                             'Ou entrar com',
@@ -338,13 +341,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 .labelMedium
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: const Color(0xFF95A1AC),
+                                  color: Color(0xFF95A1AC),
                                   letterSpacing: 0.0,
                                 ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -358,16 +361,16 @@ class _LoginWidgetState extends State<LoginWidget> {
                               context.goNamedAuth('HomePage', context.mounted);
                             },
                             text: 'Continue with Google',
-                            icon: const FaIcon(
+                            icon: FaIcon(
                               FontAwesomeIcons.google,
                               size: 20.0,
                             ),
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -394,7 +397,7 @@ class _LoginWidgetState extends State<LoginWidget> {
 
                         // You will have to add an action on this rich text to go to your login page.
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 12.0, 0.0, 12.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -408,7 +411,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               textScaler: MediaQuery.of(context).textScaler,
                               text: TextSpan(
                                 children: [
-                                  const TextSpan(
+                                  TextSpan(
                                     text: 'Não tem uma conta? ',
                                     style: TextStyle(),
                                   ),

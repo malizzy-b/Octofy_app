@@ -9,7 +9,7 @@ class StatementsTable extends SupabaseTable<StatementsRow> {
 }
 
 class StatementsRow extends SupabaseDataRow {
-  StatementsRow(super.data);
+  StatementsRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => StatementsTable();
